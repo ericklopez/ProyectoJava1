@@ -1,22 +1,22 @@
 /**
- * Subclase Gyarados que es un monstruo de tipo Agua
+ * Subclase Tangela que es un monstruo de tipo hierba
  * @author erick
  */
-public class Gyarados extends Agua{
- 
-    private final String nombreMonstruo = "Gyarados";
-    private final int hpBase = 21;
-    private final int ataqueBase = 14;
+public class Tangela extends Hierba{
+    
+    private final String nombreMonstruo = "Tangela";
+    private final int hpBase = 18;
+    private final int ataqueBase = 13;
     private final int defensaBase = 10;
-    private final int velocidadBase = 15;
-    public final String ataqueClase = "Furia dragón";
+    private final int velocidadBase = 10;
+    public final String ataqueClase = "Cosquillas";
     
     /**
-     * Contructor de la clase Gyarados
+     * Contructor de la clase Tangela
      * @param nombre
      * @param nivel 
      */
-    public Gyarados(String nombre, int nivel){
+    public Tangela(String nombre, int nivel){
         this.nivel = nivel;
         this.estado = "ok";
         this.ataque = nivel*ataqueBase;
@@ -37,12 +37,9 @@ public class Gyarados extends Agua{
     @Override
     public void ataque2(Monstruo enemigo){
         float daño;
-		
-		if ((daño = (this.ataque - enemigo.defensa)*1.6f*multiplicadorElemental(enemigo)) <= 0)
-			daño = 0;
-
-		enemigo.hp -= daño;
-		System.out.println(this.apodo+" uso furia dragón. ¡"+enemigo.apodo+" pierde "+daño+" puntos de vida!");
+        
+        System.out.println(this.apodo+" uso cosquillas. ¡"+enemigo.apodo+" se ríe!");
+		enemigo.estado="risueño :v";
     }
     
 }
