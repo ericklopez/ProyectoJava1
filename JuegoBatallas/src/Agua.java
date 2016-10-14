@@ -13,12 +13,12 @@ public abstract class Agua extends Monstruo{
     @Override
         public float multiplicadorElemental(Monstruo elemento){
             if (elemento instanceof Fuego){
-                return 2.0;
+                return (float) 2.0;
             }else if(elemento instanceof Agua || elemento instanceof Hierba){
-                return 0.5;
-            }else if(elemento instanceof Electrico){
-                return 1.0;
-            }
+                return (float) 0.5;
+            }else if(elemento instanceof Electrico){}
+                return (float) 1.0;
+            
         }
     
     /**

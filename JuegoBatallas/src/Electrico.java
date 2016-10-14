@@ -14,7 +14,7 @@ public abstract class Electrico extends Monstruo{
                 return (float) 2.0;
             else if(elemento instanceof Hierba || elemento instanceof Fuego)
                 return (float) 0.5;
-            else if(elemento instanceof Electrico)
+            else if(elemento instanceof Electrico){}
                 return (float) 1.0;
         }
     
