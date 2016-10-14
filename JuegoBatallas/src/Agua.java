@@ -33,6 +33,7 @@ public abstract class Agua extends Monstruo{
 			daño = 0;
 
 		enemigo.hp -= daño;
+                System.out.println(this.apodo+"usó torrente.");
 		System.out.println("¡"+enemigo.apodo+" pierde "+daño+" puntos de vida por el ataque de "+this.apodo+"!");
         }
     
