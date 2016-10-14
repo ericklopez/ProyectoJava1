@@ -38,7 +38,7 @@ public class Tangela extends Hierba{
     public void ataque2(Monstruo enemigo){
         float daño;
         
-        System.out.println(this.apodo+" uso cosquillas. ¡"+enemigo.apodo+" se ríe!");
+        System.out.println(this.apodo+" usó cosquillas. ¡"+enemigo.apodo+" se ríe!");
 		enemigo.estado="risueño :v";
     }
     

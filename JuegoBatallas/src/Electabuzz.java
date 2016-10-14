@@ -1,22 +1,22 @@
 /**
- * Subclase Venusaur que es un monstruo de tipo Hierba
+ * Sublcase Electabuzz que es un monstruo de tipo Electrico
  * @author erick
  */
-public class Venusaur extends Hierba{
+public class Electabuzz extends Electrico{
     
-    private final String nombreMonstruo = "Venusaur";
+    private final String nombreMonstruo = "Electabuzz";
     private final int hpBase = 20;
-    private final int ataqueBase = 17;
-    private final int defensaBase = 13;
-    private final int velocidadBase = 12;
-    public final String ataqueClase = "Placaje";
+    private final int ataqueBase = 18;
+    private final int defensaBase = 15;
+    private final int velocidadBase = 17;
+    public final String ataqueClase = "Puño trueno";
     
     /**
-     * Contructor de la clase Venusaur
+     * Contructor de la clase Electabuzz
      * @param nombre
      * @param nivel 
      */
-    public Venusaur(String nombre, int nivel){
+    public Electabuzz(String nombre, int nivel){
         this.nivel = nivel;
         this.estado = "ok";
         this.ataque = nivel*ataqueBase;
@@ -38,7 +38,7 @@ public class Venusaur extends Hierba{
 			daño = 0;
 
 		enemigo.hp -= daño;
-		System.out.println(this.apodo+" usó placaje. ¡"+enemigo.apodo+" pierde "+daño+" puntos de vida!");
+		System.out.println(this.apodo+" usó puño trueno. ¡"+enemigo.apodo+" pierde "+daño+" puntos de vida!");
     }
     
 }

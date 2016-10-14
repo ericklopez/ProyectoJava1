@@ -1,22 +1,22 @@
 /**
- * Subclase Victreebel que es un monstruo de tipo Hierba
+ * Subclase Pikachu que es un monstruo de tipo Electrico
  * @author erick
  */
-public class Victreebel extends Hierba{
-    
-    private final String nombreMonstruo = "Victreebel";
-    private final int hpBase = 18;
-    private final int ataqueBase = 13;
-    private final int defensaBase = 10;
-    private final int velocidadBase = 10;
-    public final String ataqueClase = "Ciclón de hojas";
+public class Pikachu extends Electrico{
+   
+    private final String nombreMonstruo = "Pikachu";
+    private final int hpBase = 20;
+    private final int ataqueBase = 16;
+    private final int defensaBase = 14;
+    private final int velocidadBase = 16;
+    public final String ataqueClase = "Impactrueno";
     
     /**
-     * Contructor de la clase Victreebel
+     * Contructor de la clase Pikachu
      * @param nombre
      * @param nivel 
      */
-    public Victreebel(String nombre, int nivel){
+    public Pikachu(String nombre, int nivel){
         this.nivel = nivel;
         this.estado = "ok";
         this.ataque = nivel*ataqueBase;
@@ -38,7 +38,7 @@ public class Victreebel extends Hierba{
 			daño = 0;
 
 		enemigo.hp -= daño;
-		System.out.println(this.apodo+" usó ciclón de hojas. ¡"+enemigo.apodo+" pierde "+daño+" puntos de vida!");
+		System.out.println(this.apodo+" usó impactrueno. ¡"+enemigo.apodo+" pierde "+daño+" puntos de vida!");
     }
     
 }
