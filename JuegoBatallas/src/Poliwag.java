@@ -1,21 +1,21 @@
 /**
- * Subclase Growlithe que es un monstruo de Fuego
+ * Subclase Poliwag que es un monstruo de Agua
  * @author erick
  */
-public class Growlithe extends Fuego{
-    private final String nombreMonstruo = "Growlithe";
-    private final int hpBase = 25;
-    private final int ataqueBase = 17;
-    private final int defensaBase = 14;
-    private final int velocidadBase = 15;
-    public final String ataqueClase = "intimidación";
+public class Poliwag extends Agua{
+    private final String nombreMonstruo = "Poliwag";
+    private final int hpBase = 20;
+    private final int ataqueBase = 12;
+    private final int defensaBase = 10;
+    private final int velocidadBase = 11;
+    public final String ataqueClase = "Hipnosis";
     
     /**
-     * Contructor de la clase Growlithe
+     * Contructor de la clase Blastoise
      * @param nombre
      * @param nivel 
      */
-    public Growlithe(String nombre, int nivel){
+    public Poliwag(String nombre, int nivel){
         this.nivel = nivel;
         this.estado = "ok";
         this.ataque = nivel*ataqueBase;
@@ -37,8 +37,7 @@ public class Growlithe extends Fuego{
     public void ataque2(Monstruo enemigo){
         float daño;
         
-        System.out.println(this.apodo+" uso intimidación. ¡"+enemigo.apodo+" se espanta!");
-		enemigo.estado="intimidado";
+        System.out.println(this.apodo+" uso hipnosis. ¡"+enemigo.apodo+" se duermme!");
+		enemigo.estado="dormido";
     }
-    
 }

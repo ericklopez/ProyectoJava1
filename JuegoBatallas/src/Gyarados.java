@@ -1,21 +1,22 @@
 /**
- * Subclase Growlithe que es un monstruo de Fuego
+ * Subclase Gyarados que es un monstruo de tipo Agua
  * @author erick
  */
-public class Growlithe extends Fuego{
-    private final String nombreMonstruo = "Growlithe";
-    private final int hpBase = 25;
-    private final int ataqueBase = 17;
-    private final int defensaBase = 14;
+public class Gyarados extends Agua{
+ 
+    private final String nombreMonstruo = "Gyarados";
+    private final int hpBase = 21;
+    private final int ataqueBase = 14;
+    private final int defensaBase = 10;
     private final int velocidadBase = 15;
-    public final String ataqueClase = "intimidación";
+    public final String ataqueClase = "Furia dragón";
     
     /**
-     * Contructor de la clase Growlithe
+     * Contructor de la clase Blastoise
      * @param nombre
      * @param nivel 
      */
-    public Growlithe(String nombre, int nivel){
+    public Gyarados(String nombre, int nivel){
         this.nivel = nivel;
         this.estado = "ok";
         this.ataque = nivel*ataqueBase;
@@ -36,9 +37,12 @@ public class Growlithe extends Fuego{
     @Override
     public void ataque2(Monstruo enemigo){
         float daño;
-        
-        System.out.println(this.apodo+" uso intimidación. ¡"+enemigo.apodo+" se espanta!");
-		enemigo.estado="intimidado";
+		
+		if ((daño = (this.ataque - enemigo.defensa)*1.6f*multiplicadorElemental(enemigo)) <= 0)
+			daño = 0;
+
+		enemigo.hp -= daño;
+		System.out.println(this.apodo+" uso furia dragón. ¡"+enemigo.apodo+" pierde "+daño+" puntos de vida!");
     }
     
 }

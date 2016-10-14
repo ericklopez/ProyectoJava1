@@ -4,10 +4,10 @@
  */
 public class Charizard extends Fuego{
     private final String nombreMonstruo = "Charizard";
-    private final int hpBase = 100;
-    private final int ataqueBase = 72;
-    private final int defensaBase = 70;
-    private final int velocidadBase = 64;
+    private final int hpBase = 25;
+    private final int ataqueBase = 19;
+    private final int defensaBase = 16;
+    private final int velocidadBase = 17;
     public final String ataqueClase = "Poder Solar";
     
     /**
