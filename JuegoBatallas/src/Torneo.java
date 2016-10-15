@@ -10,6 +10,7 @@ public class Torneo {
    Contrincante c2 = new Contrincante();
    Scanner sc = new Scanner (System.in);
    ArrayList<Monstruo> monstruos = new ArrayList(); 
+   
    public Torneo(){
        
        System.out.println("Bienvenido al torneo");
