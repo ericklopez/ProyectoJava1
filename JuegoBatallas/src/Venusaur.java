@@ -1,3 +1,6 @@
+
+import java.util.Random;
+
 /**
  * Subclase Venusaur que es un monstruo de tipo Hierba
  * @author erick
@@ -32,13 +35,19 @@ public class Venusaur extends Hierba{
     
     @Override
     public void ataque2(Monstruo enemigo){
-        float daño;
-		
-		if ((daño = (this.ataque - enemigo.defensa)*1.5f*multiplicadorElemental(enemigo)) <= 0)
-			daño = 0;
-
-		enemigo.hp -= daño;
-		System.out.println(this.apodo+" usó placaje. ¡"+enemigo.apodo+" pierde "+daño+" puntos de vida!");
+        Random rand = new Random();
+       float ran = rand.nextFloat();
+            
+            System.out.println(this.apodo+" utilizó "+ataqueClase);
+            if(ran<0.8){
+                float daño = (this.ataque - enemigo.defensa) *1.5f*multiplicadorElemental(enemigo);
+             if(daño <= 0){
+                System.out.println(enemigo.apodo+" no ha recibido daño");
+            }
+             enemigo.hp -= daño;
+             System.out.println(enemigo.apodo+" pierde "+daño+" puntos de vida");
+            }
+            System.out.println(enemigo.apodo+" ha esquivado el ataque");
     }
     
 }

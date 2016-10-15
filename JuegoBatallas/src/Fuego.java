@@ -32,14 +32,15 @@ public abstract class Fuego extends Monstruo{
         public void ataque1(Monstruo enemigo){
             Random rand = new Random();
             float ran = rand.nextFloat();
-            float mult = multiplicadorElemental(enemigo);
             
+            System.out.println(this.apodo+" utilizó "+ataqueElemento);
             if(ran<0.8){
-                float daño = (getAtaque()-enemigo.getDefensa()) * mult;
+                float daño = (this.ataque - enemigo.defensa) * multiplicadorElemental(enemigo);
              if(daño <= 0){
                 System.out.println(enemigo.apodo+" no ha recibido daño");
             }
-             enemigo.recibirDaño((int) daño,"");
+             enemigo.hp -= daño;
+             System.out.println(enemigo.apodo+" pierde "+daño+" puntos de vida");
             }
             System.out.println(enemigo.apodo+" ha esquivado el ataque");
         }

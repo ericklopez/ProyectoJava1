@@ -1,3 +1,6 @@
+
+import java.util.Random;
+
 /**
  * Subclase Gyarados que es un monstruo de tipo Agua
  * @author erick
@@ -36,13 +39,19 @@ public class Gyarados extends Agua{
      */
     @Override
     public void ataque2(Monstruo enemigo){
-        float daño;
-		
-		if ((daño = (this.ataque - enemigo.defensa)*1.6f*multiplicadorElemental(enemigo)) <= 0)
-			daño = 0;
-
-		enemigo.hp -= daño;
-		System.out.println(this.apodo+" uso furia dragón. ¡"+enemigo.apodo+" pierde "+daño+" puntos de vida!");
+        Random rand = new Random();
+       float ran = rand.nextFloat();
+            
+            System.out.println(this.apodo+" utilizó "+ataqueClase);
+            if(ran<0.8){
+                float daño = (this.ataque - enemigo.defensa) *1.6f*multiplicadorElemental(enemigo);
+             if(daño <= 0){
+                System.out.println(enemigo.apodo+" no ha recibido daño");
+            }
+             enemigo.hp -= daño;
+             System.out.println(enemigo.apodo+" pierde "+daño+" puntos de vida");
+            }
+            System.out.println(enemigo.apodo+" ha esquivado el ataque");
     }
     
 }

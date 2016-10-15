@@ -45,7 +45,7 @@ public class Contrincante {
                      if(mon.apodo.equals(apodo) && !(mon.estado.equals("Fuera de combate :c"))){
                          
                          monstruoActual = mon;
-                         monstruoActual.apodo = "Combatiendo B|";
+                         monstruoActual.estado = "Combatiendo B|";
                          System.out.println("¡"+apodo+" ha entrado al combate!");
                          return;
                          

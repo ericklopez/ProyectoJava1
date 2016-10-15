@@ -1,3 +1,6 @@
+
+import java.util.Random;
+
 /**
  * Subclase Growlithe que es un monstruo de Fuego
  * @author erick
@@ -35,10 +38,15 @@ public class Growlithe extends Fuego{
      */
     @Override
     public void ataque2(Monstruo enemigo){
-        float daño;
-        
-        System.out.println(this.apodo+" uso intimidación. ¡"+enemigo.apodo+" se espanta!");
-		enemigo.estado="paralizado";
+        Random rand = new Random();
+        float ran = rand.nextFloat();
+            
+            System.out.println(this.apodo+" utilizó "+ataqueClase);
+            if(ran<0.8){
+                 System.out.println(enemigo.apodo+" ha esquivado el ataque");
+            }
+            System.out.println(this.apodo+" paralizó a "+enemigo.apodo);
+            enemigo.estado="paralizado";
     }
     
 }

@@ -30,17 +30,14 @@ public abstract class Electrico extends Monstruo{
      */
     @Override
         public void ataque1(Monstruo enemigo){
-            Random rand = new Random();
+             Random rand = new Random();
             float ran = rand.nextFloat();
-            float mult = multiplicadorElemental(enemigo);
             
+            System.out.println(this.apodo+" utilizó "+ataqueElemento);
             if(ran<0.8){
-                float daño = (getAtaque()-enemigo.getDefensa()) * mult;
-             if(daño <= 0){
-                System.out.println(enemigo.apodo+" no ha recibido daño");
+                 System.out.println(enemigo.apodo+" ha esquivado el ataque");
             }
-             enemigo.recibirDaño((int) daño,"");
-            }
-            System.out.println(enemigo.apodo+" ha esquivado el ataque");
+             System.out.println(this.apodo+" paralizó a "+enemigo.apodo);
+		enemigo.estado="paralizado";
         }
 }

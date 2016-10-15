@@ -1,3 +1,6 @@
+
+import java.util.Random;
+
 /**
  * Subclase Poliwag que es un monstruo de Agua
  * @author erick
@@ -35,9 +38,16 @@ public class Poliwag extends Agua{
      */
     @Override
     public void ataque2(Monstruo enemigo){
-        float daño;
+
+        Random rand = new Random();
+        float ran = rand.nextFloat();
+            
+            System.out.println(this.apodo+" utilizó "+ataqueClase);
+            if(ran<0.8){
+                 System.out.println(enemigo.apodo+" ha esquivado el ataque");
+            }
+            System.out.println(this.apodo+" uso hipnosis. ¡"+enemigo.apodo+" se duerme!");
+            enemigo.estado="paralizado";
         
-        System.out.println(this.apodo+" uso hipnosis. ¡"+enemigo.apodo+" se duermme!");
-		enemigo.estado="dormido";
     }
 }
