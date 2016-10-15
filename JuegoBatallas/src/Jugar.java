@@ -6,6 +6,5 @@
 public class Jugar {
     public static void main ( String args[] ){
         Torneo t1 = new Torneo();
-        t1.menuPrincipal();
     }
 }

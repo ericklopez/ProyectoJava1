@@ -13,9 +13,22 @@ public class Contrincante {
         String nombre;
         Monstruo monstruoActual;
         
+        
+        public Contrincante (){
+            pocima.add(new pocimaVida());
+            pocima.add(new pocimaVida());
+            
+            pocima.add(new pocimaDefensa());
+            pocima.add(new pocimaDefensa());
+            
+            pocima.add(new pocimaAtaque());
+            pocima.add(new pocimaAtaque());
+        }
         /**
          * Método que quita a un Monstruo del torneo
          */
+        
+
         public void guardarMonstruo(){
             
             monstruoActual.estado = "esperando";
