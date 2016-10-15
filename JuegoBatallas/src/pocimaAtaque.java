@@ -1,13 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- *
+ * Subclase ataque de la farmacia (Superclase Pocima) 
  * @author erick
  */
-public class pocimaAtaque {
+public class pocimaAtaque extends Pocima{
+    
+    /**
+     * Método que aumenta el ataque del monstruo
+     * @param mon 
+     */
+    @Override
+    public void usarPocima(Monstruo mon){
+        mon.recibirAtaque(mon.getAtaque()*0.10f);
+    }
     
 }
