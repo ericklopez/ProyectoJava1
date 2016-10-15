@@ -33,24 +33,6 @@ public class Torneo {
        
    } 
    
-   void menuPrincipal(){
-       int optPrincipal = 0;
-       do {
-           System.out.println("[1] - Escoger // como que ya no");
-           System.out.println("[2] - Iniciar el Torneo");
-           System.out.println("[0] - Salir");
-           optPrincipal = sc.nextInt();
-           
-           switch ( optPrincipal ){
-               case 2:
-                   iniciarTorneo();
-                   break;
-               default:
-                   break;
-           }
-       }while(optPrincipal != 0);
-   }
-   
    void iniciarTorneo(){
        System.out.println("el torneo se ha iniciado");
    }
