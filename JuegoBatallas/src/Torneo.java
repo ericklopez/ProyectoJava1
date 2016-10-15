@@ -117,13 +117,6 @@ public class Torneo {
    }
    
    void combate(){
-       int ataque;
-       int size = 0;
-       if (c1.monstruo.isEmpty() == true)
-           System.out.println("Este monstruo esta vacio :v");
-       else
-           size =c1.monstruo.size();
-       System.out.println(size);
        
        while ( c1.monstruo.isEmpty() ==false && c2.monstruo.isEmpty() ==false ){
            // mientras haya contincantes que aun cuenten con monstruos
