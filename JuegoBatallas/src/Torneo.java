@@ -75,40 +75,40 @@ public class Torneo {
            System.out.println("opt = " +  opt);
            switch( opt ){
                case 1:
-                   cont.monstruo.add(new Blastoise(null, 100));
+                   cont.monstruo.add(new Blastoise(null, 11));
                    break;
                case 2:
-                  cont.monstruo.add(new Charizard(null, 100));
+                  cont.monstruo.add(new Charizard(null, 11));
                   break;
                case 3:
-                   cont.monstruo.add(new Electabuzz(null, 100));
+                   cont.monstruo.add(new Electabuzz(null, 11));
                    break;
                case 4:
-                  cont.monstruo.add(new Flareon(null, 100));
+                  cont.monstruo.add(new Flareon(null, 10));
                   break;
                case 5:
-                   cont.monstruo.add(new Growlithe(null, 100));
+                   cont.monstruo.add(new Growlithe(null, 12));
                    break;
                case 6:
-                   cont.monstruo.add(new Gyarados(null, 100));
+                   cont.monstruo.add(new Gyarados(null, 12));
                    break;
                case 7:
-                   cont.monstruo.add(new Jolteon(null, 100));
+                   cont.monstruo.add(new Jolteon(null, 10));
                    break;
                case 8:
-                   cont.monstruo.add(new Pikachu(null, 100));
+                   cont.monstruo.add(new Pikachu(null, 15));
                    break;
                case 9:
-                   cont.monstruo.add(new Poliwag(null, 100));
+                   cont.monstruo.add(new Poliwag(null, 13));
                    break;
                case 10:
-                   cont.monstruo.add(new Tangela(null, 100));
+                   cont.monstruo.add(new Tangela(null, 12));
                    break;
                case 11:
-                   cont.monstruo.add(new Venusaur(null, 100));
+                   cont.monstruo.add(new Venusaur(null, 11));
                    break;
                case 12:
-                   cont.monstruo.add(new Victreebel(null, 100));
+                   cont.monstruo.add(new Victreebel(null, 11));
                    break;
                default:
                    break;
@@ -120,7 +120,7 @@ public class Torneo {
        int ataque;
        int size = 0;
        if (c1.monstruo.isEmpty() == true)
-           System.out.println("Este monstruo esta vaciokjskajds");
+           System.out.println("Este monstruo esta vacio :v");
        else
            size =c1.monstruo.size();
        System.out.println(size);
