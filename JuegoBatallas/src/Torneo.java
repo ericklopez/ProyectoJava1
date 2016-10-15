@@ -6,13 +6,14 @@ import java.util.ArrayList;
  */
 
 public class Torneo {
+   Contrincante c1 = new Contrincante();
+   Contrincante c2 = new Contrincante();
    Scanner sc = new Scanner (System.in);
    ArrayList<Monstruo> monstruos = new ArrayList(); 
    public Torneo(){
        
        System.out.println("Bienvenido al torneo");
-       Contrincante c1 = new Contrincante();
-       Contrincante c2 = new Contrincante();
+
        
        String nombreContrincante;
        System.out.println("Contrincante1 Escoge tu neombre: ");
@@ -26,6 +27,10 @@ public class Torneo {
        c2.nombre = nombreContrincante;
        System.out.println( c2.nombre + "Esgoge tus mounstruos");
        escogerMonstruos( c2 );
+       
+       // iniciar la batalla
+       combate();
+       
    } 
    
    void menuPrincipal(){
@@ -52,7 +57,6 @@ public class Torneo {
    
    void escogerMonstruos( Contrincante cont){
        int opt = 0;
-       generarMonstruos();
        for ( int i = 0; i< 6; i++ ){
            System.out.println("Escoge un monstruo de los siguientes");
            System.out.println("[1] - Blastoise");
@@ -111,20 +115,40 @@ public class Torneo {
            }
        }
    }
-   void generarMonstruos(){
-       monstruos.clear();
-       monstruos.add(new Blastoise(null, 100));
-       monstruos.add(new Charizard(null, 100));
-       monstruos.add(new Electabuzz(null, 100));
-       monstruos.add(new Flareon(null, 100));
-       monstruos.add(new Growlithe(null, 100));
-       monstruos.add(new Gyarados(null, 100));
-       monstruos.add(new Jolteon(null, 100));
-       monstruos.add(new Pikachu(null, 100));
-       monstruos.add(new Poliwag(null, 100));
-       monstruos.add(new Tangela(null, 100));
-       monstruos.add(new Venusaur(null, 100));
-       monstruos.add(new Victreebel(null, 100));
+   
+   void combate(){
+       int size = 0;
+       if (c1.monstruo.isEmpty() == true)
+           System.out.println("Este monstruo esta vaciokjskajds");
+       else
+           size =c1.monstruo.size();
+       System.out.println(size);
+       
+       while ( c1.monstruo.isEmpty() ==false && c2.monstruo.isEmpty() ==false ){
+           // mientras haya contincantes que aun cuenten con monstruos
+           c1.elegirMonstruo();
+           c2.elegirMonstruo();
+           System.out.println("-----------------Informacion de los Monstruos-------------");
+           c1.listarMonstruo();
+           c2.listarMonstruo();
+           // ordenes
+           c1.monstruoActual.ataque1(enemigo);
+       }
    }
+//   void generarMonstruos(){
+//       monstruos.clear();
+//       monstruos.add(new Blastoise(null, 100));
+//       monstruos.add(new Charizard(null, 100));
+//       monstruos.add(new Electabuzz(null, 100));
+//       monstruos.add(new Flareon(null, 100));
+//       monstruos.add(new Growlithe(null, 100));
+//       monstruos.add(new Gyarados(null, 100));
+//       monstruos.add(new Jolteon(null, 100));
+//       monstruos.add(new Pikachu(null, 100));
+//       monstruos.add(new Poliwag(null, 100));
+//       monstruos.add(new Tangela(null, 100));
+//       monstruos.add(new Venusaur(null, 100));
+//       monstruos.add(new Victreebel(null, 100));
+//   }
    
 }
