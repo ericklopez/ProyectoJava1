@@ -117,6 +117,7 @@ public class Torneo {
    }
    
    void combate(){
+       int ataque;
        int size = 0;
        if (c1.monstruo.isEmpty() == true)
            System.out.println("Este monstruo esta vaciokjskajds");
@@ -132,8 +133,47 @@ public class Torneo {
            c1.listarMonstruo();
            c2.listarMonstruo();
            // ordenes
-           c1.monstruoActual.ataque1(enemigo);
+           System.out.println(c1.nombre + "Elige tu ataque");
+           elegirAtaque( c1, c2 );
+           elegirAtaque( c2, c1 );
        }
+   }
+   
+   void elegirAtaque( Contrincante c1, Contrincante c2 ){
+       int opcion;
+       int ataque;
+       
+       do {
+           System.out.println(c1.nombre + "Escoge que vas a hacer");
+           System.out.println("[1] - Lanzar un ataque");
+           System.out.println("[2] - Usar Pocima");
+           System.out.println("[3]- Cambiar de Monstruo");
+           
+           opcion = sc.nextInt();
+           switch ( opcion ){
+               case 1:
+                   System.out.println(c1.nombre + "Que ataque quieres usar");
+                   System.out.println("[1] - Ataque 1");
+                   System.out.println("[1] - Ataque 2");
+                   ataque = sc.nextInt();
+                   
+                   if ( ataque == 1){
+                       c1.monstruoActual.ataque1(c2.monstruoActual);
+                   }
+                   else if ( ataque == 2 ){
+                       c1.monstruoActual.ataque2(c2.monstruoActual);
+                   }
+                   break;
+               case 2:
+                   c1.usarPocima();
+                   break;
+               case 3:
+                   c1.elegirMonstruo();
+                   break;
+               default:
+                   break;
+           }
+       } while ( opcion != 0 );
    }
 //   void generarMonstruos(){
 //       monstruos.clear();
