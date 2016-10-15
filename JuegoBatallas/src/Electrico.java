@@ -1,8 +1,12 @@
+
+import java.util.Random;
+
 /**
  * Clase Electrico que contiene metodo abstracto de ataque y otro que calcula el multiplicador elemental
  * @author erick
  */
 public abstract class Electrico extends Monstruo{
+    public final String ataqueElemento = "Electricidad estática";
     /**
      * Metodo que calcula el daño dependiendo el elemento del monstruo al que se ataque
      * @param elemento
@@ -26,9 +30,17 @@ public abstract class Electrico extends Monstruo{
      */
     @Override
         public void ataque1(Monstruo enemigo){
-            float daño;
-        
-        System.out.println(this.apodo+" uso electricidad estática. ¡"+enemigo.apodo+" se paraliza!");
-		enemigo.estado="paralizado";
+            Random rand = new Random();
+            float ran = rand.nextFloat();
+            float mult = multiplicadorElemental(enemigo);
+            
+            if(ran<0.8){
+                float daño = (getAtaque()-enemigo.getDefensa()) * mult;
+             if(daño <= 0){
+                System.out.println(enemigo.apodo+" no ha recibido daño");
+            }
+             enemigo.recibirDaño((int) daño,"");
+            }
+            System.out.println(enemigo.apodo+" ha esquivado el ataque");
         }
 }

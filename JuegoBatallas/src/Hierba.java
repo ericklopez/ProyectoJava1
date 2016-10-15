@@ -1,8 +1,12 @@
+
+import java.util.Random;
+
 /**
  * Clase Hierba que contiene metodo abstracto de ataque y otro que calcula el multiplicador elemental
  * @author erick
  */
 public abstract class Hierba extends Monstruo{
+    public final String ataqueElemento = "Látigo sepa";
     /**
      * Metodo que calcula el daño dependiendo el elemento del monstruo al que se ataque
      * @param elemento
@@ -26,13 +30,17 @@ public abstract class Hierba extends Monstruo{
      */
     @Override
         public void ataque1(Monstruo enemigo){
-            float daño;
+            Random rand = new Random();
+            float ran = rand.nextFloat();
+            float mult = multiplicadorElemental(enemigo);
             
-            if ((daño = (this.ataque - enemigo.defensa)*multiplicadorElemental(enemigo)) <= 0)
-			daño = 0;
-
-		enemigo.hp -= daño;
-                System.out.println(this.apodo+"usó látigo sepa.");
-		System.out.println("¡"+enemigo.apodo+" pierde "+daño+" puntos de vida por el ataque de "+this.apodo+"!");
+            if(ran<0.8){
+                float daño = (getAtaque()-enemigo.getDefensa()) * mult;
+             if(daño <= 0){
+                System.out.println(enemigo.apodo+" no ha recibido daño");
+            }
+             enemigo.recibirDaño((int) daño,"");
+            }
+            System.out.println(enemigo.apodo+" ha esquivado el ataque");
         }
 }

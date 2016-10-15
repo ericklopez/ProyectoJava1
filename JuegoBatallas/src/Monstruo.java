@@ -17,7 +17,7 @@ public abstract class Monstruo {
         this.estado = estado;
         
         if(this.hp <= 0)
-            this.estado = "Fuera de combate :(";
+            this.estado = "Fuera de combate";
     }
     
     /**

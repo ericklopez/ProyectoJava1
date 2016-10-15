@@ -38,7 +38,7 @@ public class Growlithe extends Fuego{
         float daño;
         
         System.out.println(this.apodo+" uso intimidación. ¡"+enemigo.apodo+" se espanta!");
-		enemigo.estado="intimidado";
+		enemigo.estado="paralizado";
     }
     
 }
