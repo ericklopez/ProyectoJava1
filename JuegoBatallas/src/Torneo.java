@@ -72,7 +72,6 @@ public class Torneo {
            System.out.println("[11] - Venuraus");
            System.out.println("[12] - Victrebel");
            opt = sc.nextInt();
-           System.out.println("opt = " +  opt);
            switch( opt ){
                case 1:
                    cont.monstruo.add(new Blastoise(null, 11));
@@ -119,8 +118,10 @@ public class Torneo {
    void combate(){
        
        while ( c1.monstruo.isEmpty() ==false && c2.monstruo.isEmpty() ==false ){
-           // mientras haya contincantes que aun cuenten con monstruos
+           // mientras haya contrincantes que aun cuenten con monstruos
+           System.out.println(c1.nombre + "Elige tu monstruo");
            c1.elegirMonstruo();
+           System.out.println(c2.nombre + "Elige tu monstruo");
            c2.elegirMonstruo();
            System.out.println("-----------------Informacion de los Monstruos-------------");
            c1.listarMonstruo();
