@@ -32,11 +32,7 @@ public class Torneo {
        combate();
        
    } 
-   
-   void iniciarTorneo(){
-       System.out.println("el torneo se ha iniciado");
-   }
-   
+    
    void escogerMonstruos( Contrincante cont){
        int opt = 0;
        for ( int i = 0; i< 6; i++ ){
